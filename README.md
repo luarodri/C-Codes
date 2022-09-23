@@ -1,2 +1,2 @@
 # C-Codes
-Meu repositório de exercícios das aulas de linguagem C.
+Meu repositório de exercícios de linguagem C.
