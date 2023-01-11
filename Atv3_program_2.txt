@@ -1,0 +1,37 @@
+/*
+Alunos: Ariane Arantes dos Santos e Luanda Rodrigues da Silva.
+Turma: 3BINFO
+
+OBS: Professor, nesse trabalho há dois prints da tela: uma com o código limpo e a outra com a explicação das linhas.
+
+Finalidade do Programa: Nesse programa estão sendo inseridos números nos quais serão somados e no final é dito se a soma é
+maior, menor ou igual a 100. 
+*/
+
+#include <stdio.h> //É uma biblioteca de arquivos de cabeçalho que nos permite trabalhar com funções de entrada e saída.
+
+int main()//função principal do programa, onde o código será executado.
+{
+    int num1, num2, soma; //declara num1, num2 e soma em formato float.
+    printf("Digite um número: "); //pede para ser digitado um número.
+    scanf("%d", &num1);/*vai pegar o resultado em int da linha 16, onde %d vai dizer ao programa que será
+    pega uma variável do tipo int, o dado que virá depois da vírgula.
+    */
+    printf("Digite mais um número: ");//pede para ser digitado mais um número. 
+    scanf("%d", &num2);/*vai pegar o resultado em int da linha 20, onde %d vai dizer ao programa que será
+    pega uma variável do tipo int, o dado que virá depois da vírgula.
+    */
+    soma = num1 + num2;//vai definir a soma.
+    printf("O valor da soma é = %d\n", soma);/*vai printar o valor inteiro da soma e pular uma linha,
+    onde %d vai dizer ao programa que será pega uma variável do tipo int, o dado que virá depois da vírgula.
+    */
+    
+    if(soma>100){//vai fazer uma condição que se a soma for maior que 100 ele vai printar que é maior.
+        printf("O valor da soma é maior que 100.\n");//vai printar se o valor da soma e pular uma linha.
+    }else if(soma==100){//vai fazer uma condição que se a soma for igual a 100 ele vai printar que é igual.
+        printf("O valor da soma é igual a 100.\n");//vai printar o valor da soma e pular uma linha
+    }else{
+        printf("O valor da soma é menor que 100.");//e se o valor da soma for menor que 100 ele vai printar que é menor.
+    }
+    return 0;//vai retornar 0
+}

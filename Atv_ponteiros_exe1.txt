@@ -1,0 +1,35 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Escreva um programa que declare um inteiro, um tipo float, um char, um bool. Ponteiros para inteiro, float, 
+char e bool. Associe as variáveis aos ponteiros (use &). Modifique os valores de cada variável usando os ponteiros. 
+Imprima os valores das variáveis antes e após  a modificação.
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdbool.h> //biblioteca de função.
+
+int main(){
+    
+    int numInt = 30, *pInt; //cria uma variável inteira com valor inicial '30' e um ponteiro do tipo inteiro.
+    bool numBool = 1, *pBool; //cria uma variável booleana com valor incial '1' e um ponteiro do tipo booleano.
+    float numFloat = 1.35, *pFloat; //cria uma variável float com valor inicial '1.35' e um ponteiro do tipo float.
+    char LetChar = 'L', *pChar; //cria uma variável char com valor inicial 'L' e um ponteiro do tipo char.
+    
+    pInt = &numInt; //atribui ao ponteiro 'pInt' o valor que o endereço de memória da variável 'numInt' está guardando.
+    pBool = &numBool; //atribui ao ponteiro 'pBool' o valor que o endereço de memória da variável 'numBool' está guardando.
+    pFloat = &numFloat; //atribui ao ponteiro 'pFloat' o valor que o endereço de memória da variável 'numFloat' está guardando.
+    pChar = &LetChar; //atribui ao ponteiro 'pChar' o valor que o endereço de memória da variável 'LetChar' está guardando.
+    
+    printf ("%d, %d, %0.2f, %c", numInt, numBool, numFloat, LetChar); //vai printar tudo.
+    
+    *pInt = 50; //troca o valor do ponteiro inteiro para '50'.
+    *pBool = 0; //troca o valor do ponteiro booleano para '0'.
+    *pFloat = 3.56; //troca o valor do ponteiro float para '3.56'.
+    *pChar = 'J'; //troca o valor do ponteiro char para 'J'.
+    
+    printf("\n%d, %d, %0.2f, %c", numInt, numBool, numFloat, LetChar); //vai printar tudo.
+
+    return 0; //retorna 0.
+}

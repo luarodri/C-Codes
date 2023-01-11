@@ -1,0 +1,29 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade do programa: Neste programa vai ser pedido para ser inserido um número 
+que o programa vai dizer se é par ou não.
+*/
+#include <stdio.h>
+
+
+int main()
+{
+    int num; //Declara a variável 'num' como inteira.
+    num = 0; //Atribui a 'num' como incialmente tendo valor '0'.
+    
+    printf("Digite o número: "); //Pede para ser inserido um número.
+    scanf("%d", &num); //Pega o número utilizando o scanf "%d".
+    
+    if(num>0 && !(num%2)){
+        printf("%d é um número par não negativo.", num);
+    }else{
+        printf("%d não é um número par.", num);
+    }
+/*Das linhas 19 a 23 está sendo feita uma condição 'if' que se o número for maior que 0 e o resultado da divisão de num
+por 2 for 0 o programa vai imprimir que o número é par e se não for o programa vai imprimir que o númeor não é par.*/
+ 
+    return 0;//Retorna 0.
+}
+

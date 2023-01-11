@@ -1,0 +1,39 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade do programa: O programa vai pedir para serem inseridas duas frases que vão ser armazenadas em vetores 
+diferentes e após isso o mesmo vai concatenar essas duas frazes em um outro vetor e imprimir as duas juntas na tela. 
+*/
+
+
+#include <stdio.h> //biblioteca de função.
+#include <string.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+char* destino(char *frase1, char *frase2){ /*a função destino é definida como char e a mesma recebe os arrays 'frase1' e
+'frase2' como parâmetros e retorna um char.*/
+
+    int i; //define a variável 'i' como int.
+    
+    for(i=0; frase1[i]!='\0'; ++i); //percorre o array 'frase1', para saber o tamanho do mesmo.
+    for(int j=0; frase2[j]!='\0'; ++j, ++i){ //percorre o array 'frase2' e então concatena os dois arrays.
+      frase1[i]=frase2[j];
+    }
+    frase1[i]='\0'; //aqui quando a posição 'i' do array 'frase1' for igual a 
+    return frase1; //'\0' ele vai retornar o array 'frase1' 
+}
+int main(){
+    char frase1[100]; //define o array 'frase1' como char e com 100 posições.
+    printf("Digite uma frase: "); //pede para ser digitada uma frase.
+    gets(frase1); //pega esse array.
+    
+    char frase2[100];//define o array 'frase2' como char e com 100 posições.
+    printf("\nDigite mais uma frase: ");//pede para ser digitada uma frase.
+    gets(frase2); //pega esse array.
+    
+    printf("A sua nova frase com as duas strings concatenadas ficou: "); //vai printar um eneunciado sobre como a frase ficou.
+    printf(destino(frase1,frase2));//vai printar o resultado, as duas frases concatenas e dentro de um outro array.
+    
+    return 0;//vei retornar 0.
+}

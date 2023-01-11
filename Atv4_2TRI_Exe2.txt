@@ -1,0 +1,37 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade do programa: Faça uma função que retorne a posição de um dado caractere dentro de uma string.
+
+OBS: Professor, infelizmente em algumas palavras ele ainda conta o espaçõ em branco como caractere.
+*/
+
+
+#include <stdio.h>  //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+void retornaPosicao(char palav[50], char caractere){ //função que vai retornar a posição da variável na string.
+    
+    for(int i = 0; palav[i]!= '\0' && palav[i]!= '\0'; i++){ //loop for que vai percorrer a string até o '\n'.
+        if(caractere==palav[i]){ //condição 'if' que se o caractere for igual a determinada posição da string ele 
+            printf("\n%dº posição\n", i); //vai printar a posição.
+        }
+    }
+}
+
+int main(){
+    
+    char palav[50], caractere; //define as variáveis 'frase' e 'caractere' como char.
+    
+    printf("\nDigite um caractere: "); //pede para ser digitado um caractere.
+    gets(&caractere); //pega o valor do endereço da variável 'caractere'.
+    
+    printf("\nDigite uma palavra ou frase: "); //pede para ser digitada uma palavra.
+    gets(&palav); //pega o valor do endereço da variável 'palav'.
+    
+    
+    retornaPosicao(palav, caractere); //chama a função 'retornaPosicao'.
+
+    return 0; //retorna 0.
+}

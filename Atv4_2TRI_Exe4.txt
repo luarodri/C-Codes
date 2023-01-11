@@ -1,0 +1,31 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade do programa: Faça um programa que leia do teclado uma matriz 3x3 e reescreva na ordem inversa.
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+int main(){
+    
+    int ma[3][3]; //define a matriz quadrada como inteira.
+    
+   for(int i = 0; i<3; i++){ //loop for que vai repetir a matriz a ser digitada até que as linhas e colunas estejam preenchidas.
+        for(int j = 0; j<3; j++){
+           printf("Digite a matriz[%d][%d]: ", i, j); //pede para ser digitado os valores da matriz.
+            scanf("%d", &ma[i][j]); //vai pegar os valores digitados.
+        }
+    }
+    
+    printf("\nA matriz inversa: "); //vai imprimir um enunciado para a matriz inversa.
+    
+    for(int i = 1; i>=0; i--){ //loop for que vai repetir a matriz fazendo o decremento de suas linhas e colunas.
+        for(int j = 1; j>=0; j--){
+           printf("\n[%d][%d] ", ma[i][j]); //printa a matriz inversa decrementada.
+        }
+    }
+
+    return 0; //vai retornar 0.
+}

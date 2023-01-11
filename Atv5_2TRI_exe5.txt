@@ -1,0 +1,31 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade do programa: Dado um determinado número com entrada via teclado descubra se o número é primo.
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+int main(){
+   
+   int num, cont; //define as variáveis 'num' e 'cont' como inteiras.
+   
+   printf("Entre com um número: "); //pede para entrar com um número.
+   scanf("%d", &num); //pega o valor do endereço da variável.
+   
+   for(int i = 1; i<=num; i++){ //loop for onde a variável 'i' vai ter o valor 1 e se for menor ou igual a 'num' irá incrementar.
+       if(num%i==0){ //condição que se o resto da divisão de 'num' por 'i' for igual a zero a variável 'cont' vai incrementar mais um ao seu valor.
+           cont++;
+       }
+   }
+   
+   if(cont==2){ //condição que se a variável 'cont' for igual a 2 o número vai ser primo.
+       printf("O número %d é primo", num); //vai printar que o número é primo.
+   }else{ //se não, o número não é.
+       printf("O número %d não é primo", num); //vai printar que o número nã é primo.
+   }
+   
+   return 0; //vai retornar 0.
+}

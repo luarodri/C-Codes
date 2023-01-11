@@ -1,0 +1,35 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Escreva um programa utilizando ponteiros que leia 2 valores inteiros e chame uma função que receba estas 2 variáveis 
+"A" e "B" e, troque o seu conteúdo entre elas, ou seja, após a execução da função, "A" conterá o valor de "B e "B" conterá o valor de "A".
+*/
+
+#include <stdio.h> //biblioteca de função.
+
+int a, b; //estão sendo criadas 2 variáveis globais inteiras.
+
+void ChangeVar(int *a, int *b){ //função que vai trocar o conteúdo das variáveis entre si utilizando os ponteiros.
+    
+    int varChange = *a; //cria a variável 'varChange' que vai armazenar o valor do ponteiro '*a'.
+    *a = *b; //o ponteiro de '*a' está recebendo o valor do ponteiro '*b'.
+    *b = varChange; //o ponteiro '*b' vai estar recebendo o valor da variável 'varChange'.
+}
+
+int main(){
+   
+   printf("\nDigite o primeiro número: "); //pede para ser digitado o primeiro número.
+   scanf("%d", &a); //pega o endereço de memória da variável 'a'.
+   
+   printf("\nDigite o segundo número: "); //pede para ser digitado o segundo número.
+   scanf("%d", &b); //pega o endereço de memória da variável 'b'.
+   
+    ChangeVar(&a, &b); //chama a função 'ChangeVar'.
+    
+    printf("\nO primeiro número ficou como: %d", a); //vai printar o novo valor da variável 'a'.
+    printf("\n\nO segundo número ficou como: %d", b); //vai printar o novo valor da variável 'b'.
+    
+    return 0; //retorna 0.
+}
+

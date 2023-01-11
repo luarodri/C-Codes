@@ -1,0 +1,47 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: o programa vai somar duas matrizes quadradas.
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+int main() {
+
+    int i, j, mat1[2][2]; //define as variáveis 'i' e 'j' e a matriz 1 como inteiras.
+    int mat2[2][2]; //define a matriz 2 como inteira.
+    int matresultado[2][2]; //define a matriz resultado como inteira.
+
+    //loop for que vai repetir a primeira matriz a ser digitada até que todas as colunas e linhas estejam preenchidas. 
+    for(i=0; i<2; ++i){
+        for(j=0; j<2; ++j){
+        printf("A primeira matriz[%d][%d]: ", i, j);
+        scanf("%d", &mat1[i][j]);
+        }
+   }
+    printf("\n"); //pula uma linha.
+    
+    //loop for que vai repetir a segunda matriz a ser digitada até que todas as colunas e linhas estejam preenchidas. 
+   for(i=0; i<2; ++i){
+        for(j=0; j<2; ++j){
+        printf("A segunda matriz[%d][%d]: ", i, j);
+        scanf("%d", &mat2[i][j]);
+        }
+   }
+    printf("\n"); //pula uma linha.
+    
+    //loop for que vai somar as duas matrizes.
+    for(i = 0; i<2; i++){
+        for(j = 0; j<2; j++){
+            matresultado[i][j] = mat1[i][j] + mat2[i][j];
+        }
+        printf(" A soma ficou: %2d ", matresultado[i][j]); //vai printar o resultado.
+    }
+    
+
+    return 0; //retorna 0.
+}
+
+

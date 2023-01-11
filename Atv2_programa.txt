@@ -1,0 +1,36 @@
+/******************************************************************************
+Tarefa 2 de Tópicos Especiais em Programação. 
+Alunos: Ariane Arantes dos Santos e Luanda Rodrigues da Silva.
+Turma: 3BINFO.
+
+OBS: Professor, nesse trabalho há 2 prints da tela: uma com o código limpo só
+com as linhas e outro com a explicaçaõ de cada linha. 
+
+Finalidade do programa:
+Nesse primeiro programa em C, o mesmo deve executar um código onde ele armazena
+uma determinada idade em uma variável e um array de uma String de um nome 
+e os imprime no final. 
+
+*******************************************************************************/
+
+#include <stdio.h> //É uma biblioteca de arquivos de cabeçalho que nos permite trabalhar com funções de entrada e saída.
+
+int main() //Função principal, onde o código irá ser executado.
+{ //Colchete de abertura, onde abre a função principal.
+    char meuNome[] = "Luanda"; /* Na linha 20 estou utilizando o tipo char para
+    criar um array de caracteres para fazer uma string. */
+    printf("Meu nome é %s.", meuNome);
+    /* Na linha de código 22 o programa está imrpimindo a frase "Meu nome é..."
+    e na mesma há o %s que é como uma string de formato onde o %s será substituído pelo
+    dado que vai vir depois da vírgula.
+    */
+    int minhaIdade = 17; //Na linha 27 há uma variável sendo definida e a ela sendo atribuída o valor 17.
+    printf("\nEu tenho %i anos.", minhaIdade);
+    /* Na linha 28 o programa irá imprimir a frase "Eu tenho ... anos."" E na mesma frase
+    há o \n que serve para pular uma linha, já o %i serve para dizer ao programa que o print vai imrpimir
+    uma variável de valor inteiro. E no final há o minhaIdade que é uma variável definida na linha 27.
+    */
+    
+    return 0; //return 0 finaliza a main() função. Significa que o programa terminou normalmente.
+} //Colchete de fechamento, encerra a função principal.
+

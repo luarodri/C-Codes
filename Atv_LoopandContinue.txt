@@ -1,0 +1,82 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Este programa funciona como uma calculadora onde o mesmo vai pedir
+para serem inseridos dois número e logo depois vai dar a opção de escolher uma
+operação matemática e após a escolha ele vai imprimir o resultado da operação 
+escolhida.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    float a, b, resultado; //Declara as variáveis 'a' 'b' e 'resultado' como float.
+    int op, i; //Declara a variável 'op' e 'i' como inteiras.
+    
+    a = 0; //Atribui a 'a' como incialmente tendo valor '0'.
+    b = 0; //Atribui a 'b' como incialmente tendo valor '0'.
+    resultado = 0; //Atribui a 'resultado' como incialmente tendo valor '0'.
+    op = 0; //Atribui a 'op' como incialmente tendo valor '0'.
+    i = 0; //Atribui a 'i' como inicilamente tendo valor '0'.
+ 
+    printf("Para utilizar a calculadora você precisa inserir dois operandos.");
+    printf(" \n Digite o valor do primeiro número: ");
+    scanf("%f", &a);
+    printf(" \n Digite o valor do segundo número: ");
+    scanf("%f", &b);
+ 
+ /*Das linhas 25 a 29 o programa vai pedir para serem inseridos dois números
+ e depois vai pegá-los utilizando o scanf "%f".
+ */
+    printf(" \n Estas são as operações da calculadora: ");
+    printf(" \n 1. Soma ");
+    printf(" \n 2. Subtração ");
+    printf(" \n 3. Multiplicação ");
+    printf(" \n 4. Divisão ");
+    
+/*Das linhas 34 a 38 o programa vai mostrar quais são as operações,
+cada uma sendo representadas de números de 1 a 4.
+*/
+    printf(" \n Digite o número da opção desejada: ");
+    scanf("%d", &op);
+/*O programa vai pedir para escolher uma das operações e depois vai pegar o seu
+número utilizando o scanf "%d".
+*/
+    
+    for(i=0; i<=op; i++){
+        if(op==1){
+            resultado = a + b;
+            printf(" \n A soma dos dois números é: %.2f", resultado);
+            continue;
+        }else if(op==2){
+            resultado = a - b;
+            printf(" \n A subtração dos dois números é: %.2f", resultado);
+            continue;
+        }else if(op==3){
+            resultado = a * b;
+            printf(" \n A multiplicação dos dois números é: %.2f", resultado);
+            continue;
+        }else if(b==0){
+            printf(" \n Não existe divisão por zero.");
+            continue;
+        }else if(op==4){
+            resultado = a / b;
+            printf(" \n A divisão dos dois números é: %.2f", resultado);
+            continue;
+        }else{
+            printf("\n Você digitou uma opção inválida.");
+            continue;
+        }
+/*Das linhas 49 a 71 o programa vai entrar num loop 'for' que se a variável 'i' for menor ou igual a variável 'op' ele vai
+incrementar mais um à variável 'i' e entrar nas condições 'if' e 'else if'. Nestas condições a variável 'op' vai estar sendo
+igualada ao número de cada operação e se o número da operação for igual ao da variável ele vai fazer a conta correspondente 
+imprimir a resposta e pular para a próxima interação utilizando o 'continue'. E no final há o 'else' que só vai ser acionado
+se não for digitada uma opção válida da calculadora.
+*/
+    }
+    return 0;//vai retornar 0
+}
+

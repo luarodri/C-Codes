@@ -1,0 +1,34 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade do programa: Considerando a entrada via teclado de um número na base decimal converta para a base binária. 
+(Não vale utilizar a máscara no printf).
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+void binario(int n){ //função que vai converter o número decimal em binário, ela passa por parâmetro a variável 'n'.
+    
+    if(n==0){ //condição que se o número for igual a zero o programa vai somente printá-lo e não irá fazer nenhuma conversão.
+        printf("%d", n); //printa o número.
+    }else{
+        binario(n/2); //aqui a função está sendo definida como a divisão do número por dois.
+        printf("%d", n%2);//aqui ele vai printar o número binário como o resto da divisão do número por dois.
+    }
+}
+
+int main(){
+    
+    int n; //define a variável 'n' como inteira.
+    
+    printf("Digite um número decimal: "); //pede para ser digitado um número decimal.
+    scanf("%d", &n); //pega o valor do endereço da variável.
+    
+    printf("\n");//pula uma linha.
+    binario(n); //chama a função binario.
+ 
+    return 0; //retorna 0.
+}
+

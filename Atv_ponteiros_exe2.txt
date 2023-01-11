@@ -1,0 +1,27 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Escreva um programa que contenha duas variáveis tipo char. Compare seus endereços e exiba o maior endereço.
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdbool.h> //biblioteca de função.
+
+int main(){
+   
+    char p1; //cria a variável tipo char 'p1'.
+    char p2; //cria a variável tipo char 'p2'.
+
+    if(&p1 > &p2){
+        printf("p1 tem o maior endereço de memória: %d", &p1);
+    }else{
+        printf("p2 tem o maior endereço de memória: %d", &p2);
+    }
+
+/*Da linha 16 a 19 está sendo feita uma condição que se o endereço de memória da variável 'p1' for maior que o da variável 'p2' ele vai printar
+o valor do endereço de 'p1' e caso contrário o endereço da 'p2'.*/
+
+    return 0; //retorna 0.
+}
+

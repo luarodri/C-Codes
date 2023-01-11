@@ -1,0 +1,30 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Crie um programa que contenha uma matriz de float contendo 3 linhas e 3 colunas. Imprima o endereço de cada posição dessa matriz.
+
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+int main() {
+
+    float i, j, mat1[3][3]; //define as variáveis 'i' e 'j' e a matriz 1 como float.
+
+    //loop for que vai repetir a primeira matriz a ser digitada até que todas as colunas e linhas estejam preenchidas. 
+    for(float i = 0; i<3; ++i){
+        for(float j = 0; j<3; ++j){
+        printf("A primeira matriz[%lf][%lf]: ", i, j);
+        scanf("%lf", &mat1[i][j]);
+        }
+   }
+    printf(&mat1[i][j]); //vai printar o endereço de memória.
+
+    return 0; //retorna 0.
+}
+
+
+
+

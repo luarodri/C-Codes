@@ -1,0 +1,68 @@
+/*
+Alunos: Ariane Arantes dos Santos e Luanda Rodrigues da Silva.
+Turma: 3BINFO
+
+OBS: Professor, nesse trabalho há dois prints da tela: uma com o código limpo e a outra com a explicação das linhas.
+
+Finalidade do Programa: Nesse programa serão inseridas duas notas de um aluno e será calculada a média
+ponderada das notas. E então será imprimido a nota do aluno e o conceito final.
+
+OBS: A nota1 tempeso 4 e a nota2 tem peso 6.
+OBS: O conceito final vai de D até A sendo eles: D == média<=4.9; C == média<=6.9; 
+B == média<=8.9 e A == média<=10.
+*/
+
+#include <stdio.h>//É uma biblioteca de arquivos de cabeçalho que nos permite trabalhar com funções de entrada e saída.
+
+float media, nota1, nota2, med;//variáveis globais definidas em formato float.
+
+float mediapond(float nota1, float nota2)/*A primeira função denominada float mediapond() irá receber as duas notas, 
+calcular e retornar a média ponderada.*/
+{
+    media = nota1 * 0.4 + nota2 * 0.6; /*define a média sendo a soma das notas. Sendo 0.4 e 0.6 correspondentes aos pesos 
+das notas.*/
+    return media;//vai retornar a media.
+}
+
+char conceito(float media)/*A segunda função denominada char conceito() irá receber a média das notas e retornar
+o conceito de acordo com a média.*/
+{
+    char conc;//define a variável conceito como char
+    if (media <= 4.9){//condição que se a nota for menor ou igual a 4.9 ele vai imrpimir o conceito D.
+      conc = 'D';//define o conceito como char 'D'.
+    }
+    else {
+      if (media <= 6.9) {//condição que se a nota for menor ou igual a 6.9 ele vai imrpimir o conceito C.
+        conc = 'C';//define o conceito como char 'C'.
+      }
+      else {
+        if (media <= 8.9 ){//condição que se a nota for menor ou igual a 6.9 ele vai imrpimir o conceito B.
+            conc ='B';//define o conceito como char 'B'.
+        }
+        else {
+            conc = 'A';//E se não for nenhum dos "se" acima o else define o conceito como char 'A'.
+        }
+      }
+    }
+  return conc;//vai retornar o conceito.
+}
+
+int main()//função principal dop programa, onde o código será executado.
+{
+  int i;//define uma variável i em formato int.
+  char conce;//define a variável conce como char.
+
+  for (i=0; i<2; i++) {//looping que vai rodar até 2 e incrementar a varável i.
+    printf("\n\nDigite a nota 1:");//pede para ser digitada uma nota.
+    scanf("%f", &nota1);/*vai pegar o resultado em float da linha 56, onde %f vai dizer ao programa que será
+    pega uma variável do tipo float, o dado que virá depois da vírgula.*/
+    printf("\nDigite a nota 2:");//pede para ser digitada outra nota.
+    scanf("%f", &nota2);/*vai pegar o resultado em float da linha 59, onde %f vai dizer ao programa que será
+    pega uma variável do tipo float, o dado que virá depois da vírgula.*/
+    med = mediapond(nota1,nota2);//define a variável med.
+    conce = conceito(med);//define a variável conce.
+    printf("\n\nmédia = %.2f \nConceito final = %c", med, conce);//vai printar a média e o conceito final.
+    break;//vai parar o programa abruptamente.
+  }
+}
+

@@ -1,0 +1,51 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: O programa vai receber duas strings, compará-las e depois imprimir se são iguais ou não.
+*/
+
+#include <stdio.h>//biblioteca de função.
+#include <string.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+void compara(char* frase1, char* frase2){ //função que vai comparar as duas strings.
+    
+    int c = 0; //define a variável 'c' como inteira e seu valor inicial como 0.
+ 
+    while (*frase1 != '\0' || *frase2 != '\0'){ 
+        if (*frase1 == *frase2) {
+            frase1++;
+            frase2++;
+        }
+        else if ((*frase1 == '\0' && *frase2 != '\0')||(*frase1 != '\0' && *frase2 == '\0')|| *frase1 != *frase2){
+            c = 1;
+            printf("As strings são diferentes\n");
+            break;
+        }
+    }
+/*Das linhas 16 a 24 está sendo feita uma condição que vai repetir o loop até o fim das strings a serem
+comparadas e depois vai incrementá-las. Se a 'frase1' for igual a '\0' e a 'frase2' também for igual a '\0' ou a 'frase1' for diferente de 
+'\0' e a 'frase2' também for diferente de '\0' o programa vai printar que elas são diferentes pois a variável 'c' vai ser igual a 1. 
+Entretanto, se a variável 'c' for igual a 0 ele vai printar que as strings são iguais.*/
+ 
+    //faz uma condição que se a variável 'c' for igual a '0' o programa vai imprimir a igualdade.
+    if (c == 0) {
+        printf("As duas strings são iguais.\n");
+    }
+}
+
+int main(void){
+   
+    char frase1[50];//cria um array de string de 50 posições.
+    printf("Digite uma frase: ");//pede para ser digitada uma frase.
+    gets(frase1);//pega a frase.
+    
+    char frase2[50];//cria um array de string com 50 posições.
+    printf("Digite mais uma frase: ");//pede para ser digitada mais uma frase.
+    gets(frase2);//pega a frase.
+    
+   compara(frase1,frase2);//chama a função 'compara'.
+   
+   return 0;//retorna 0.
+}

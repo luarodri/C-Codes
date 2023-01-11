@@ -1,0 +1,54 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Crie um programa que utilizando ponteiros substitua o conteúdo entre a matriz "A" 3x3 pela "B" 3x3..
+*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+int i, j, mat1[2][2]; //define as variáveis 'i' e 'j' como globais e a matriz 1 como inteiras.
+int mat2[2][2]; //define a matriz 2 como inteira.
+
+void ChangeVar(int *mat1, int *mat2){ //função que vai trocar o conteúdo das variáveis entre si utilizando os ponteiros.
+    
+    int varChange = *mat1; //cria a variável 'varChange' que vai armazenar o valor do ponteiro '*mat1'.
+    *mat1 = *mat2; //o ponteiro de '*mat1' está recebendo o valor do ponteiro '*mat2'.
+    *mat2 = varChange; //o ponteiro '*mat2' vai estar recebendo o valor da variável 'varChange'.
+}
+
+int main() {
+    
+    //loop for que vai repetir a primeira matriz a ser digitada até que todas as colunas e linhas estejam preenchidas. 
+    for(i=0; i<2; ++i){
+        for(j=0; j<2; ++j){
+        printf("A primeira matriz[%d][%d]: ", i, j);
+        scanf("%d", &mat1[i][j]);
+        }
+   }
+    printf("\n"); //pula uma linha.
+    
+    //loop for que vai repetir a segunda matriz a ser digitada até que todas as colunas e linhas estejam preenchidas. 
+   for(i=0; i<2; ++i){
+        for(j=0; j<2; ++j){
+        printf("A segunda matriz[%d][%d]: ", i, j);
+        scanf("%d", &mat2[i][j]);
+        }
+   }
+   
+   scanf("%d", &mat1); //pega o endereço de memória da variável 'mat1'.
+   scanf("%d", &mat2); //pega o endereço de memória da variável 'mat2'.
+   
+   ChangeVar(&mat1, &mat2); //chama a função 'ChangeVar'.
+   
+    printf("\nO primeiro número ficou como: %d", mat1); //vai printar o novo valor da variável 'mat1'.
+    printf("\n\nO segundo número ficou como: %d", mat2); //vai printar o novo valor da variável 'mat2'.
+   
+   
+    return 0; //retorna 0.
+}
+
+
+
+

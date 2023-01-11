@@ -1,0 +1,36 @@
+/*
+Nome: Luanda Rodrigues da Silva.
+Turma: 3BINFO.
+
+Finalidade do programa: Crie um programa que faça multiplicação de número inteiro de uma matriz 3x3, mas a entrada de 
+dados deve ser via teclado.*/
+
+#include <stdio.h> //biblioteca de função.
+#include <stdlib.h> //biblioteca de função.
+
+int main()
+{
+    int matriz[3][3]; //define a matriz quadrada como inteira.
+    int inteironum; //define a variável 'inteironum' como inteira.
+    
+    for(int i = 0; i<3; i++){ //loop for que vai repetir a matriz a ser digitada até que as linhas e colunas estejam preenchidas.
+        for(int j = 0; j<3; j++){
+           printf("Digite os valores da matriz[%d][%d]: ", i, j); //pede para ser digitado os valores da matriz.
+            scanf("%d", &matriz[i][j]); 
+        }
+    }
+    
+    printf("\nEntre com um número inteiro: "); //pede para ser digitado um número inteiro.
+    scanf("%d", &inteironum); //pega o valor do endereço da variável 'inteironum'.
+    
+    printf("\nA matriz multiplicada ficou como: "); //printa um enunciado de como a matriz ficou.
+    
+    for(int i = 0; i<3; i++){ //loop for que vai preencher as colunas e linhas da matriz novamente.
+        for(int j = 0; j<3; j++){
+            matriz[i][j] *= inteironum; //vai multiplicar e atribuir à matriz o valor da varíavel 'inteironum' até a matriz estar completa.
+            printf("\n[%d][%d]: %d\n", i, j, matriz[i][j]); //vai printar o resultado.
+        }
+    }
+    
+    return 0; //vai retornar 0.
+}

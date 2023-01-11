@@ -1,0 +1,89 @@
+/*
+Nome: Luanda Rodrigues da Silva
+Turma: 3BINFO
+
+Finalidade: Este programa funciona como uma calculadora onde o mesmo vai pedir
+para serem inseridos dois número e logo depois vai dar a opção de escolher uma
+operação matemática e após a escolha ele vai imprimir o resultado da operação 
+escolhida.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    float a, b, resultado; //Declara as variáveis 'a' 'b' e 'resultado' como float.
+    int op; //Declara a variável 'op' como inteira.
+    
+    a = 0; //Atribui a 'a' como incialmente tendo valor '0'.
+    b = 0; //Atribui a 'b' como incialmente tendo valor '0'.
+    resultado = 0; //Atribui a 'resultado' como incialmente tendo valor '0'.
+    op = 0; //Atribui a 'op' como incialmente tendo valor '0'.
+ 
+    printf("Para utilizar a calculadora você precisa inserir dois operandos.");
+    printf(" \n Digite o valor do primeiro número: ");
+    scanf("%f", &a);
+    printf(" \n Digite o valor do segundo número: ");
+    scanf("%f", &b);
+ 
+ /*Das linhas 24 a 28 o programa vai pedir para serem inseridos dois números
+ e depois vai pegá-los utilizando o scanf "%f".
+ */
+    printf(" \n Estas são as operações da calculadora: ");
+    printf(" \n 1. Soma ");
+    printf(" \n 2. Subtração ");
+    printf(" \n 3. Multiplicação ");
+    printf(" \n 4. Divisão ");
+    
+/*Das linhas 33 a 37 o programa vai mostrar quais são as operações,
+cada uma sendo representadas de números de 1 a 4.
+*/
+    printf(" \n Digite o número da opção desejada: ");
+    scanf("%d", &op);
+/*O programa vai pedir para escolher uma das operações e depois vai pegar o seu
+número utilizando o scanf "%d".
+*/
+ 
+    switch (op)
+    {
+    case 1:
+        resultado = a + b;
+        printf(" \n A soma dos dois números é: %.2f", resultado);
+        break;
+/*Ao entrar no switch o mesmo vai testar se a variável 'op' vai estar no valor 1 e se a case for igual a 1 vai fazer a operação
+de soma das variáveis 'a' e 'b' e imprimir o resultado. Após isso o programa vai dar um break assim interrompendo o switch*/
+ 
+    case 2:
+        resultado = a - b;
+        printf(" \n A subtração dos dois números é: %.2f", resultado);
+        break;
+/*Ao entrar no switch o mesmo vai testar se a variável 'op' vai estar no valor 2 e se a case for igual a 2 vai fazer a operação
+de subtração das variáveis 'a' e 'b' e imprimir o resultado. Após isso o programa vai dar um break assim interrompendo o switch*/
+ 
+    case 3:
+        resultado = a * b;
+        printf(" \n A multiplicação dos dois números é: %.2f", resultado);
+        break;
+/*Ao entrar no switch o mesmo vai testar se a variável 'op' vai estar no valor 3 e se a case for igual a 3 vai fazer a operação
+de multiplicação das variáveis 'a' e 'b' e imprimir o resultado. Após isso o programa vai dar um break assim interrompendo o switch*/
+ 
+    case 4:
+        if(b==0){
+            printf(" \n Não existe divisão por zero.");
+/*Na linha 72 vai ter uma condição 'if' que se o valor da variável 'b' for igual a '0' o programa não vai rodar e vai avisar que
+não existe divisão por 0*/
+        }else{
+            resultado = a / b;
+            printf(" \n A divisão dos dois números é: %.2f", resultado);
+        }
+        break;
+/*Portanto ao entrar no else o mesmo vai testar se a variável 'op' vai estar no valor 4 e se a case for igual a 4 vai fazer a operação
+de multiplicação das variáveis 'a' e 'b' e imprimir o resultado. Após isso o programa vai dar um break assim interrompendo o switch*/
+    default:
+        printf(" \n Você digitou uma opção inválida!");
+    }
+/*E no default a calculadora não vai funcionar e o programa vai avisar que foi digitada uma opção que é inválida*/
+ 
+    return 0;//vai retornar 0
+}

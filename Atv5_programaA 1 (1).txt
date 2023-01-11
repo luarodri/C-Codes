@@ -1,0 +1,44 @@
+/*
+Nome:Luanda Rodrigues da Silva, Turma:3BINFO
+OBS: Professor, nesse trabalho existem mais de um print da tela do programa.
+
+Funcionanemento: Neste programa vai ser inserida uma String na qual será lida e percorrida
+enquanto o programa determina uma condição para que os caracteres sejam contados.
+OBS: O programa vai dizer quantos caracteres têm incluindo os espaços em branco
+e o'\0'.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+   char frase[100]; 
+   //Na linha 15 está sendo criado um array de string de 100 posições.
+   int i, cont; 
+   //Na linha 17 estão sendo declaradas as variáveis 'i' e 'cont' como inteiras.
+   cont = 0; 
+   //Na linha 19 está sendo atribuida a 'cont' como inicialmente tendo valor '0'.
+   printf("Digite uma ou frase: "); 
+   //Na linha 21 o programa vai pedir para ser digitada uma frase.
+   gets(frase);
+   //Na linha 23 o programa vai pegar essa frase, ou seja, a string.
+   
+   i = 0;
+   //Na linha 26 está sendo atribuida a variável 'i' como inicialmente tendo o valor 0.
+   do{
+       i++; //vai incrementar +1 à variável 'i'.
+       if(frase[i]<=i); 
+       cont = cont+1;
+    /* Na linha 30 está sendo feita uma condição 'if' que se a posição 'i' do 
+    array frase[i] for menor ou igual ao valor da variável 'i' o programa vai 
+    adicionar +1 ao valor da variável 'cont', contador de caracteres.*/
+      
+   }
+   while(frase[i]!='\0');
+   //Na linha 37 está sendo feita a condição 'while' que irá fazer o loop 'do' funcionar.
+   printf("\n\n A sua frase tem %d caracteres", cont);
+   /*Vai printar a quantidade de caracteres que existem na string.
+   O programa vai utilizar o formato %d para imprimir o valor inteiro.*/
+   
+   return 0; //retorna zero.
+}
